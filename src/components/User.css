@@ -2,9 +2,8 @@
   border-radius: 10px;
   width: 45rem;
   height: 30rem;
-  background-color: rgb(14, 143, 100);
-  margin: auto;
-  margin-top: 10rem;
+  background-color: #1b7f79;
+  margin: 20px auto;
 }
 .pic {
   margin: 10px 250px;
@@ -22,7 +21,7 @@
   padding: 10px;
   width: 100px;
   border: none;
-  background-color: red;
+  background-color: #ff4858;
   color: aliceblue;
   font-size: 15px;
 }
@@ -42,7 +41,7 @@
 }
 .text {
   margin-bottom: 5px;
-  border: 2px solid rgb(14, 143, 100);
+  border: 2px solid #1b7f79;
   height: 3rem;
 }
 .text h3 {

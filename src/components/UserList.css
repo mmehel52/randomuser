@@ -1,0 +1,25 @@
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+  width: 100%;
+  color: aliceblue;
+}
+
+td,
+th {
+  border: 1px solid #1b7f79;
+  padding: 8px;
+}
+tr {
+  background-color: grey;
+}
+tr:hover {
+  background-color: #1b7f79;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ff4858;
+  color: white;
+}

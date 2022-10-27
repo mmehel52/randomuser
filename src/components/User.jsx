@@ -9,6 +9,7 @@ import phoneSvg from "../assets/phone.svg";
 import gmanSvg from "../assets/growing-up-man.svg";
 import gwomanSvg from "../assets/growing-up-woman.svg";
 import padlockSvg from "../assets/padlock.svg";
+import UserList from "./UserList";
 
 const User = () => {
   const [user, setUser] = useState("");
@@ -20,6 +21,7 @@ const User = () => {
     phone: false,
     login: false,
   });
+  const [addUser, setAddUser] = useState([]);
   const getUser = () => {
     fetch("https://randomuser.me/api")
       .then((res) => res.json())
@@ -31,7 +33,11 @@ const User = () => {
 
   console.log(user);
   const { gender, name, dob, email, picture, location, phone, login } = user;
-
+  const handleAddUser = () => {
+    if (!addUser.includes(user)) {
+      setAddUser([...addUser, user]);
+    }
+  };
   return (
     <div className="container">
       <img className="pic" src={picture?.large} alt="" />
@@ -71,7 +77,7 @@ const User = () => {
       </div>
       <div className="btn">
         <button onClick={getUser}>Get User</button>
-        <button>Add User</button>
+        <button onClick={handleAddUser}>Add User</button>
       </div>
       <div className="icons">
         <button
@@ -125,6 +131,7 @@ const User = () => {
           <img className="icon" src={padlockSvg} alt="#" />
         </button>
       </div>
+      <div>{addUser.length > 0 && <UserList addUser={addUser} />}</div>
     </div>
   );
 };
