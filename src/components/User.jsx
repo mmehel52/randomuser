@@ -56,7 +56,7 @@ const User = () => {
         )}
         {hovered.dob && (
           <div>
-            <h3> {dob?.date.slice(0, 10)}</h3>
+            <h3> {dob.age}</h3>
           </div>
         )}
         {hovered.phone && (
